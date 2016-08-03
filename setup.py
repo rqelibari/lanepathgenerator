@@ -35,7 +35,8 @@ setup(
     packages=find_packages(),
     keywords='lanepath lane generator graph svgo',
     install_requires=[],
-    extras_require={},
+    extras_require={'dev': ['pep8>=1.7.0']},
+    test_suite='lanepathy.tests',
     zip_safe=False,
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
