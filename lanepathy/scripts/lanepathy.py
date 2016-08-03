@@ -21,10 +21,9 @@
 import click
 
 @click.command()
-@click.argument('svgfile', type=click.File('r'),
-                help='SVG file with street paths.')
+@click.argument('svgfile', type=click.File('r'))
 @click.argument('outfile', type=click.Path(dir_okay=False, writable=True,
-                resolve_path=True), help='The output path.')
+                resolve_path=True))
 def cli(svgfile, outfile):
     """Read SVG file and generate lane paths."""
     pass
