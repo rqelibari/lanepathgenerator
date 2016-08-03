@@ -34,8 +34,12 @@ setup(
     license='Apache 2.0',
     packages=find_packages(),
     keywords='lanepath lane generator graph svgo',
-    install_requires=[],
+    install_requires=['click>=6.6'],
     extras_require={'dev': ['pep8>=1.7.0']},
+    entry_points='''
+        [console_scripts]
+        lanepathy=lanepathy.scripts.lanepathy:cli
+    ''',
     test_suite='lanepathy.tests',
     zip_safe=False,
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers

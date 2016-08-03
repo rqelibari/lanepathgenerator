@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+    Lanepathy
+
+
+    (c) 2016 Copyright Rezart Qelibari <qelibarr@informatik.uni-freiburg.de>
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+"""
+import click
+
+@click.command()
+@click.argument('svgfile', type=click.File('r'),
+                help='SVG file with street paths.')
+@click.argument('outfile', type=click.Path(dir_okay=False, writable=True,
+                resolve_path=True), help='The output path.')
+def cli(svgfile, outfile):
+    """Read SVG file and generate lane paths."""
+    pass
